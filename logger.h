@@ -1,6 +1,6 @@
 //
 // Created by Bruno on 30/06/2017.
-//
+// v1.0.0
 
 
 #include <string.h>

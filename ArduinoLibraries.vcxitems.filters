@@ -2,7 +2,6 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
-    <Text Include="$(MSBuildThisFileDirectory)test.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)logger.h" />
