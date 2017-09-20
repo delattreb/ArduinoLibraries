@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{1b7fcbd7-384f-4893-9701-5f085c6fd390}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
+    <Text Include="$(MSBuildThisFileDirectory)test.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)libAPRS.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libBME280.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)lib18b20.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libDHT22.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libGPS.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libMPU6050.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libLCD.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libLED.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libSD.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)logger.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libRTC.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libSI7021.h" />
+  </ItemGroup>
+</Project>
