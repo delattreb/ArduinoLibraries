@@ -1,6 +1,10 @@
+// Name: libLCD.h
+// Created by: Bruno DELATTRE
+// Date: 12/08/2017
+// Description: LCD 16*2 gesture
 //
-// Created by Bruno on 12/08/2017.
-//
+// Version: 1.0.0
+
 
 #include <LiquidCrystal_I2C.h>
 #include "var.h"
@@ -21,6 +25,9 @@ public:
 	~libLCD() {
 	}
 
+	//
+	// begin
+	//
 	void begin()
 	{
 		lcdi2c.begin(LCD_ROW, LCD_LINE);
@@ -39,7 +46,10 @@ public:
 		lcdi2c.setCursor(x, 1);
 		lcdi2c.print("%");
 	}
-
+	
+	//
+	// displayData
+	//
 	void displayData(float temp, float hum)
 	{
 		int x = 8;

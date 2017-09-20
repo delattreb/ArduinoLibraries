@@ -1,6 +1,9 @@
+// Name: lib18B20.h
+// Created by: Bruno DELATTRE
+// Date: 12/08/2017
+// Description: DS18B20 Dallas tempterature/humidity sensor 
 //
-// Created by Bruno on 12/08/2017.
-//
+// Version: 1.0.0
 
 #include <OneWire.h>
 #include <DallasTemperature.h>

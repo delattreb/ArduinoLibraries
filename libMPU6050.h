@@ -1,3 +1,10 @@
+// Name: libMPU6050.h
+// Created by: Bruno DELATTRE
+// Date: 12/08/2017
+// Description: MPU6050 gyroscope sensor 
+//
+// Version: 1.0.0
+
 #include "I2Cdev.h"
 #include <MPU6050.h>
 
@@ -20,6 +27,9 @@ public:
 	~libMPU6050() {
 	}
 
+	//
+	// begin
+	//
 	void begin() {
 		// initialize device
 		accelgyro.initialize();
@@ -38,6 +48,9 @@ public:
 		*/
 	}
 
+	//
+	// getData
+	//
 	void getData(int16_t *ax, int16_t *ay, int16_t *az, int16_t *gx, int16_t *gy, int16_t *gz) {
 		accelgyro.getMotion6(ax, ay, az, gx, gy, gz);
 #ifdef INFO

@@ -1,11 +1,13 @@
+// Name: libLED.h
+// Created by: Bruno DELATTRE
+// Date: 17/08/2017
+// Description: LED
 //
-// Created by Bruno on 17/08/2017.
-//
+// Version: 1.0.0
 
 class libLED {
 
 private:
-
 
 public:
 

@@ -1,7 +1,10 @@
+// Name: libSD.h
+// Created by: Bruno DELATTRE
+// Date: 13/09/2017
+// Description: micro SD card reader gesture
 //
-// Created by Bruno on 13/09/2017.
-// v1.0.0
-//
+// Version: 1.0.0
+
 
 #include <SI7021.h>
 
@@ -17,15 +20,24 @@ public:
 	~libSI7021() {
 	}
 
+	//
+	// init
+	//
 	void init() {
 		sensor.begin();
 	}
 
+	//
+	// getTemperature
+	//
 	float getTemperature() {
 		float temp = sensor.getCelsiusHundredths();
 		return temp / 100;
 	}
 
+	//
+	// getHumidity
+	//
 	float getHumidity() {
 		return sensor.getHumidityPercent();
 	}

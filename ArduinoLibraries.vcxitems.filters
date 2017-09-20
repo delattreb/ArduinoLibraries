@@ -6,7 +6,6 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)logger.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libSI7021.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)libRTC.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libLED.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libLCD.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libMPU6050.h" />
@@ -16,5 +15,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)libBME280.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libAPRS.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libSD.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libDS3231.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libDS1307.h" />
   </ItemGroup>
 </Project>

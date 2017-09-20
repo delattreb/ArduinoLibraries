@@ -1,6 +1,9 @@
+// Name: libSD.h
+// Created by: Bruno DELATTRE
+// Date: 30/06/2017
+// Description: micro SD card reader gesture
 //
-// Created by Bruno on 30/06/2017.
-//
+// Version: 1.0.0
 
 #include <SD.h>
 
@@ -21,6 +24,9 @@ public:
 	~libSD() {
 	}
 
+	//
+	// init
+	//
 	void init()
 	{
 		if (!SD.begin(SD_PIN)) {
@@ -35,6 +41,9 @@ public:
 		}
 	}
 
+	//
+	// WriteData
+	//
 	void WriteData(long lat, long lon, float gpsaltitude, float gpscourse, float speed, int16_t ax, int16_t ay, int16_t az, int16_t gx, int16_t gy, int16_t gz, float dstemp, float temp, float hum, float pres, String now) {
 		if (!SD.begin(sdpin)) {}
 		File myFile = SD.open(log_file, FILE_WRITE);
