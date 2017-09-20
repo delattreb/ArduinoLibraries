@@ -1,6 +1,9 @@
+// Name: libLogger.h
+// Created by: Bruno DELATTRE
+// Date: 30/06/2017
+// Description: log with serevals level
 //
-// Created by Bruno on 30/06/2017.
-// v1.0.0
+// Version: 1.0.0
 
 
 #include <string.h>
@@ -9,7 +12,6 @@
 class Logger {
 
 private:
-
 	int loglevel;
 
 public:
@@ -22,6 +24,9 @@ public:
 
 	}
 
+	//
+	// log
+	//
 	void log(int level, String logMessage) {
 		String message = "";
 		if (level >= loglevel) {

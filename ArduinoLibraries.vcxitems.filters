@@ -4,7 +4,6 @@
     <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)logger.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libSI7021.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libLED.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libLCD.h" />
@@ -17,5 +16,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)libSD.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libDS3231.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libDS1307.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libLogger.h" />
   </ItemGroup>
 </Project>
