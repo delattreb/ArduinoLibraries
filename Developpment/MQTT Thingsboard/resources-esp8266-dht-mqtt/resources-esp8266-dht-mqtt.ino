@@ -4,9 +4,9 @@
 #define WIFI_AP "FreeboxDELMaison"
 #define WIFI_PASSWORD "!KillBill10!"
 
-#define TOKEN "8GxgPwehBShardbcmElk"
+#define TOKEN "pdo27f8egbS2a2cXnCGc"
 
-char thingsboardServer[] = "192.168.1.22";
+char thingsboardServer[] = "demo.thingsboard.io";
 
 WiFiClient wifiClient;
 
@@ -88,7 +88,7 @@ void reconnect() {
     }
     Serial.print("Connecting to ThingsBoard node ...");
     // Attempt to connect (clientId, username, password)
-    if ( client.connect("testdevice", TOKEN, NULL) ) {
+    if ( client.connect("ESP8266DemoDevice", TOKEN, NULL) ) {
       Serial.println( "[DONE]" );
     } else {
       Serial.print( "[FAILED] [ rc = " );
@@ -99,6 +99,7 @@ void reconnect() {
     }
   }
 }
+
 
 
 

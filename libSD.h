@@ -12,13 +12,10 @@ class libSD {
 private:
 	String log_file;
 	int sdpin;
-public:
-	libSD() {
-	}
 
-	libSD(String logfile, int sd_pin) {
-		log_file = logfile;
-		sdpin = sd_pin;
+public:
+
+	libSD() {
 	}
 
 	~libSD() {
@@ -27,9 +24,11 @@ public:
 	//
 	// init
 	//
-	void init()
-	{
-		if (!SD.begin(SD_PIN)) {
+	void init(int sd_pin, String logfile) {
+		log_file = logfile;
+		sdpin = sd_pin;
+		
+		if (!SD.begin(sdpin)) {
 #ifdef INFO
 			Serial.println("SD KO!");
 #endif 
@@ -37,6 +36,35 @@ public:
 		else {
 #ifdef INFO
 			Serial.println("SD OK");
+#endif 
+		}
+	}
+
+	//
+	// WriteDataTemp
+	//
+	void WriteDataTemp(float temp, float hum, String now) {
+		if (!SD.begin(sdpin)) {}
+		File myFile = SD.open(log_file, FILE_WRITE);
+		if (myFile) {
+#ifdef DEBUG
+			Serial.println("Write data");
+#endif 
+
+			// Write data
+			myFile.print(now);
+			myFile.print(";");
+
+			myFile.print(temp);
+			myFile.print(";");
+			myFile.print(hum);
+			myFile.println(";");
+			
+			myFile.close();
+		}
+		else {
+#ifdef DEBUG
+			Serial.println("SD KO");
 #endif 
 		}
 	}

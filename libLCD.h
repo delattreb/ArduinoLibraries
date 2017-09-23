@@ -39,14 +39,19 @@ public:
 		lcdi2c.print("Temp:");
 		lcdi2c.setCursor(x, 1);
 		lcdi2c.print("Hum:");
-		
+
 		x = 13;
 		lcdi2c.setCursor(x, 0);
 		lcdi2c.print("c");
 		lcdi2c.setCursor(x, 1);
 		lcdi2c.print("%");
+
+		lcdi2c.setCursor(15, 0);
+		lcdi2c.print("W");
+		lcdi2c.setCursor(15, 1);
+		lcdi2c.print("_");
 	}
-	
+
 	//
 	// displayData
 	//
@@ -57,6 +62,15 @@ public:
 		lcdi2c.print(temp, 1);
 		lcdi2c.setCursor(x, 1);
 		lcdi2c.print(hum, 0);
+	}
+
+	//
+	// displayWiFi connexion
+	//
+	void displayWiFiConnexion(String connexion)
+	{
+		lcdi2c.setCursor(15, 1);
+		lcdi2c.print(connexion);
 	}
 };
 
