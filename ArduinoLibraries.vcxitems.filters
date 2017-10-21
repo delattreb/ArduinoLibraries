@@ -25,6 +25,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\RTCLib_by_NeiroN\RTClib.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\SI7021-master\SI7021.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\TinyGPS-13\TinyGPS.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcDS3231.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcDateTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcTemperature.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcUtility.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Adafruit_NeoPixel\Adafruit_NeoPixel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libAdafruitNeoPixel.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Libraries">
@@ -40,5 +46,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\RTCLib_by_NeiroN\RTClib.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\SI7021-master\SI7021.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\TinyGPS-13\TinyGPS.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcDateTime.cpp">
+      <Filter>Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcUtility.cpp">
+      <Filter>Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Adafruit_NeoPixel\Adafruit_NeoPixel.cpp" />
   </ItemGroup>
 </Project>

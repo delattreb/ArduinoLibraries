@@ -5,7 +5,8 @@
 //
 // Version: 1.0.0
 
-#include <RtcDS3231.h>
+//#include <RtcDS3231.h>
+#include "Libraries/DS3231/src/RtcDS3231.h"
 
 RtcDS3231<TwoWire> Rtc(Wire);
 
