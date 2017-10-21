@@ -5,8 +5,9 @@
 //
 // Version: 1.0.0
 
-#include <OneWire.h>
-#include <DallasTemperature.h>
+//#include <OneWire.h>
+#include "Libraries/MAX31850_OneWire/OneWire.h"
+#include "Libraries/DallasTemperature/DallasTemperature.h"
 
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);

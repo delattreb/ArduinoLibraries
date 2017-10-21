@@ -17,5 +17,28 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)libDS3231.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libDS1307.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libLogger.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\BlueDot_BME280_Library\BlueDot_BME280.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DallasTemperature\DallasTemperature.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\I2Cdev\I2Cdev.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\MAX31850_OneWire\OneWire.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\MPU6050\MPU6050.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\RTCLib_by_NeiroN\RTClib.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\SI7021-master\SI7021.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\TinyGPS-13\TinyGPS.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{6799f134-b543-4dcf-ae89-4e08aaea426d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\BlueDot_BME280_Library\BlueDot_BME280.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DallasTemperature\DallasTemperature.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\I2Cdev\I2Cdev.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\MAX31850_OneWire\OneWire.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\MPU6050\MPU6050.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\RTCLib_by_NeiroN\RTClib.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\SI7021-master\SI7021.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\TinyGPS-13\TinyGPS.cpp" />
   </ItemGroup>
 </Project>

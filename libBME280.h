@@ -6,8 +6,7 @@
 // Version: 1.0.0
 
 #include <avr/wdt.h>
-#include "BlueDot_BME280.h"
-
+#include "Libraries/BlueDot_BME280_Library/BlueDot_BME280.h"
 
 class libBME280 {
 private:

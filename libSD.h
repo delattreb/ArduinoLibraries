@@ -7,11 +7,10 @@
 
 #include <SD.h>
 
+
 class libSD {
 
 private:
-	String log_file;
-	int sdpin;
 
 public:
 
@@ -24,18 +23,15 @@ public:
 	//
 	// init
 	//
-	void init(int sd_pin, String logfile) {
-		log_file = logfile;
-		sdpin = sd_pin;
-		
-		if (!SD.begin(sdpin)) {
+	void init() {
+		if (!SD.begin(SD_CS_PIN)) {
 #ifdef INFO
-			Serial.println("SD KO!");
+			Serial.println("SD not connected");
 #endif 
 		}
 		else {
 #ifdef INFO
-			Serial.println("SD OK");
+			Serial.println("SD connected");
 #endif 
 		}
 	}
@@ -43,14 +39,13 @@ public:
 	//
 	// WriteDataTemp
 	//
-	void WriteDataTemp(float temp, float hum, String now) {
-		if (!SD.begin(sdpin)) {}
-		File myFile = SD.open(log_file, FILE_WRITE);
+	void WriteDataTemp(float temp, float hum, String now, String file) {
+		if (!SD.begin(SD_CS_PIN)) {}
+		File myFile = SD.open(file, FILE_WRITE);
 		if (myFile) {
 #ifdef DEBUG
 			Serial.println("Write data");
 #endif 
-
 			// Write data
 			myFile.print(now);
 			myFile.print(";");
@@ -59,7 +54,7 @@ public:
 			myFile.print(";");
 			myFile.print(hum);
 			myFile.println(";");
-			
+
 			myFile.close();
 		}
 		else {
@@ -72,14 +67,15 @@ public:
 	//
 	// WriteData
 	//
-	void WriteData(long lat, long lon, float gpsaltitude, float gpscourse, float speed, int16_t ax, int16_t ay, int16_t az, int16_t gx, int16_t gy, int16_t gz, float dstemp, float temp, float hum, float pres, String now) {
-		if (!SD.begin(sdpin)) {}
-		File myFile = SD.open(log_file, FILE_WRITE);
+	void WriteData(long lat, long lon, float gpsaltitude, float gpscourse, float speed, int16_t ax, int16_t ay, int16_t az, int16_t gx, int16_t gy, int16_t gz, float dstemp, float temp, float hum, float pres, String now, String file) {
+		if (!SD.begin(SD_CS_PIN)) {}
+		File myFile = SD.open(file, FILE_WRITE);
 		if (myFile) {
 			//Date
 			myFile.print(now);
 			myFile.print(";");
 
+#ifdef ARDUINO_1
 			//GPS
 			myFile.print(lat);
 			myFile.print(";");
@@ -92,6 +88,21 @@ public:
 			myFile.print(String(speed));
 			myFile.print(";");
 
+			//DS18B20
+			myFile.print(String(dstemp));
+			myFile.print(";");
+
+			//SI7021
+			myFile.print(String(temp));
+			myFile.print(";");
+			myFile.println(String(hum));
+#endif
+
+#ifdef ARDUINO_2
+			//BME280
+			myFile.print(String(pres));
+			myFile.print(";");
+			
 			//Gyro
 			myFile.print(ax);
 			myFile.print(";");
@@ -103,22 +114,15 @@ public:
 			myFile.print(";");
 			myFile.print(gy);
 			myFile.print(";");
-			myFile.print(gz);
-			myFile.print(";");
+			myFile.println(gz);
+#endif
 
-			//DS18B20
-			myFile.print(String(dstemp));
-			myFile.print(";");
-
-			//BME280
-			myFile.print(String(temp));
-			myFile.print(";");
-			myFile.print(String(hum));
-			myFile.print(";");
-			myFile.println(String(pres));
 			myFile.close();
 		}
 		else {
+#ifdef DEBUG
+			Serial.println("SD KO");
+#endif
 		}
 	}
 };

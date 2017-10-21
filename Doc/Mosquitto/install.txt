@@ -1,0 +1,59 @@
+In this Video, Step by Step Demonstration is being done regarding Installing Mosquitto Server (MQTT) on Raspberry Pi 3.
+
+Steps to Install and Configure Mosquitto Server on Raspberry Pi 3:
+
+Step 1: Update the System
+#sudo apt-get update
+
+Step 2: Update the System Repositories
+#sudo wget http://repo.mosquitto.org/debian/mosq...
+#sudo apt-key add mosquitto-repo.gpg.key
+#cd /etc/apt/sources.list.d/
+#sudo wget http://repo.mosquitto.org/debian/mosq...
+#sudo apt-get update
+#sudo apt-get install mosquitto
+
+Step 3: Install Three Parts of Mosquitto Proper
+#sudo apt-get install mosquitto mosquitto-clients python-mosquitto
+
+Step 4: Stop the Server
+#sudo /etc/init.d/mosquitto stop
+
+Step 5: Configuring and Starting the Mosquitto Server
+#sudo nano /etc/mosquitto/mosquitto.conf
+
+The File Should Look as follows
+# Place your local configuration in /etc/mosquitto/conf.d/
+#
+# A full description of the configuration file is at
+# /usr/share/doc/mosquitto/examples/mosquitto.conf.example
+
+pid_file /var/run/mosquitto.pid
+
+persistence true
+persistence_location /var/lib/mosquitto/
+
+log_dest topic
+
+
+log_type error
+log_type warning
+log_type notice
+log_type information
+
+connection_messages true
+log_timestamp true
+
+include_dir /etc/mosquitto/conf.d
+
+Step 6: Starting the Server
+#sudo /etc/init.d/mosquitto start
+
+Step 7: Open Two Terminals using Putty
+Terminal 1: Type the following:
+#mosquitto_sub -d -t hello/world
+
+Terminal 2: Type the Following:
+mosquitto_pub -d -t hello/world -m "Hello from Terminal window 2!"
+
+you can see the message on Terminal 1...

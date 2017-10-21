@@ -5,8 +5,7 @@
 //
 // Version: 1.0.0
 
-
-#include <SI7021.h>
+#include "Libraries/SI7021-master/SI7021.h"
 
 class libSI7021 {
 
@@ -15,6 +14,7 @@ private:
 public:
 
 	libSI7021() {
+		//sensor.setPrecision(0);
 	}
 
 	~libSI7021() {

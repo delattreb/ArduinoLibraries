@@ -34,13 +34,13 @@ public:
 	}
 
 	void displayText() {
-		int x = 2;
+		int x = 0;
 		lcdi2c.setCursor(x, 0);
 		lcdi2c.print("Temp:");
 		lcdi2c.setCursor(x, 1);
 		lcdi2c.print("Hum:");
 
-		x = 13;
+		x = 11;
 		lcdi2c.setCursor(x, 0);
 		lcdi2c.print("c");
 		lcdi2c.setCursor(x, 1);
@@ -57,7 +57,7 @@ public:
 	//
 	void displayData(float temp, float hum)
 	{
-		int x = 8;
+		int x = 6;
 		lcdi2c.setCursor(x, 0);
 		lcdi2c.print(temp, 1);
 		lcdi2c.setCursor(x, 1);

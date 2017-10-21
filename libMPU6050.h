@@ -5,8 +5,9 @@
 //
 // Version: 1.0.0
 
-#include "I2Cdev.h"
-#include <MPU6050.h>
+
+#include "Libraries/I2Cdev/I2Cdev.h"
+#include "Libraries/MPU6050/MPU6050.h"
 
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
 #include "Wire.h"
@@ -54,17 +55,17 @@ public:
 	void getData(int16_t *ax, int16_t *ay, int16_t *az, int16_t *gx, int16_t *gy, int16_t *gz) {
 		accelgyro.getMotion6(ax, ay, az, gx, gy, gz);
 #ifdef INFO
-		Serial.print("Ax: ");
+		Serial.print("Ax ");
 		Serial.print(*ax);
-		Serial.print(" Ay: ");
+		Serial.print(" Ay ");
 		Serial.print(*ay);
-		Serial.print(" Az: ");
+		Serial.print(" Az ");
 		Serial.print(*az);
-		Serial.print(" Gx: ");
+		Serial.print(" Gx ");
 		Serial.print(*gx);
-		Serial.print(" Gy: ");
+		Serial.print(" Gy ");
 		Serial.print(*gy);
-		Serial.print(" Gz: ");
+		Serial.print(" Gz ");
 		Serial.println(*gz);
 #endif 
 		//accelgyro.getAcceleration(&ax, &ay, &az);
