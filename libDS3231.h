@@ -25,9 +25,18 @@ public:
 	//
 	// init
 	//
-	void init() {
+	static void init(boolean binit) {
 		Rtc.Begin();
 		RtcDateTime compiled = RtcDateTime(__DATE__, __TIME__);
+
+		if (binit)
+		{
+#ifdef INFO
+			Serial.println("RTC forced");
+#endif 
+			Rtc.SetDateTime(compiled);
+		}
+
 		if (!Rtc.IsDateTimeValid())
 		{
 #ifdef INFO
