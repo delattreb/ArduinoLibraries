@@ -37,6 +37,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\I2Cdev\I2Cdev.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\MAX31850_OneWire\OneWire.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\MPU6050\MPU6050.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\NewliquidCrystal\LiquidCrystal_I2C.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\RTCLib_by_NeiroN\RTClib.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\SI7021-master\SI7021.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\TinyGPS-13\TinyGPS.h" />

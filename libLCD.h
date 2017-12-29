@@ -5,8 +5,8 @@
 //
 // Version: 1.0.0
 
-
-#include <LiquidCrystal_I2C.h>
+//#include <LiquidCrystal_I2C.h>
+#include "Libraries/NewliquidCrystal/LiquidCrystal_I2C.h"
 #include "var.h"
 
 LiquidCrystal_I2C lcdi2c(LCD_ADDR, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
