@@ -1,6 +1,9 @@
+// Name: libDHT22.h
+// Created by: Bruno DELATTRE
+// Date: 12/08/2017
+// Description: DHT22 tempterature/humidity sensor 
 //
-// Created by Bruno on 12/08/2017.
-//
+// Version: 1.0.0
 
 #include <SimpleDHT.h>
 
@@ -20,6 +23,9 @@ public:
 	~libDHT22() {
 	}
 
+	//
+	// getData
+	//
 	void getData(float* ttemp, float* thum) {
 		float temperature = 0;
 		float humidity = 0;

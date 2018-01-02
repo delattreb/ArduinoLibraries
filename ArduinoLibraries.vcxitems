@@ -15,20 +15,48 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
-    <Text Include="$(MSBuildThisFileDirectory)test.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)libAdafruitNeoPixel.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libAPRS.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libBME280.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)lib18b20.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libDHT22.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libDS3231.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libGPS.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libMPU6050.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libLCD.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libLED.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Adafruit_NeoPixel\Adafruit_NeoPixel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\BlueDot_BME280_Library\BlueDot_BME280.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DallasTemperature\DallasTemperature.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcDateTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcDS3231.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcTemperature.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcUtility.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\I2Cdev\I2Cdev.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\MAX31850_OneWire\OneWire.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\MPU6050\MPU6050.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\NewliquidCrystal\LiquidCrystal_I2C.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\RTCLib_by_NeiroN\RTClib.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\SI7021-master\SI7021.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\TinyGPS-13\TinyGPS.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libSD.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)logger.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)libRTC.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libLogger.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)libDS1307.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libSI7021.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Adafruit_NeoPixel\Adafruit_NeoPixel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\BlueDot_BME280_Library\BlueDot_BME280.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DallasTemperature\DallasTemperature.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcDateTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcUtility.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\I2Cdev\I2Cdev.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\MAX31850_OneWire\OneWire.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\MPU6050\MPU6050.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\RTCLib_by_NeiroN\RTClib.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\SI7021-master\SI7021.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\TinyGPS-13\TinyGPS.cpp" />
   </ItemGroup>
 </Project>

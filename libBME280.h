@@ -1,9 +1,14 @@
-#include <avr/wdt.h>
-#include "BlueDot_BME280.h"
+// Name: libBME280.h
+// Created by: Bruno DELATTRE
+// Date: 12/08/2017
+// Description: BME280 tempterature/humidity/presure sensor 
+//
+// Version: 1.0.0
 
+#include <avr/wdt.h>
+#include "Libraries/BlueDot_BME280_Library/BlueDot_BME280.h"
 
 class libBME280 {
-
 private:
 	BlueDot_BME280 bme;                                     //Object for Sensor 1
 	int bmeDetected = 0;                                    //Checks if Sensor 1 is available
@@ -16,6 +21,9 @@ public:
 	~libBME280() {
 	}
 
+	//
+	// Init
+	//
 	void init() {
 
 		bme.parameter.communication = 0;                    //I2C communication for Sensor 1 (bme1)
@@ -90,7 +98,9 @@ public:
 		}
 	}
 
-
+	//
+	// getData
+	//
 	void getData(float  *ttemp, float *thum, float *tpres) {
 
 		wdt_reset();  //This function resets the counter of the Watchdog Timer. Always use this function if the Watchdog Timer is enabled.

@@ -1,8 +1,12 @@
+// Name: libGPS.h
+// Created by: Bruno DELATTRE
+// Date: 12/08/2017
+// Description: GPS gesture
 //
-// Created by Bruno on 12/08/2017.
-//
+// Version: 1.0.0
 
-#include "TinyGPS.h"
+//#include " TinyGPS.h"
+#include "Libraries/TinyGPS-13/TinyGPS.h"
 #include <SoftwareSerial.h>
 
 
@@ -22,6 +26,9 @@ public:
 	~libGPS() {
 	}
 
+	//
+	// begin
+	//
 	void begin()
 	{
 		nss.begin(SERIAL_SOFT);
