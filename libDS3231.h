@@ -73,6 +73,17 @@ public:
 	//
 	// getDateTimeStr
 	//
+	String setDateTimeStr(String strtime)
+	{
+		char* time= (char *)malloc(strtime.length());
+		strcpy(time, strtime.c_str());
+		RtcDateTime compiled = RtcDateTime(__DATE__, time);
+		Rtc.SetDateTime(compiled);
+	}
+
+	//
+	// getDateTimeStr
+	//
 	String getDateTimeStr()
 	{
 		RtcDateTime now = Rtc.GetDateTime();

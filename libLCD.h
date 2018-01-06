@@ -36,20 +36,19 @@ public:
 	void displayText() {
 		int x = 0;
 		lcdi2c.setCursor(x, 0);
-		lcdi2c.print("Temp:");
+		lcdi2c.print("Temp");
 		lcdi2c.setCursor(x, 1);
-		lcdi2c.print("Hum:");
+		lcdi2c.print("Hum");
 
-		x = 11;
-		lcdi2c.setCursor(x, 0);
+		lcdi2c.setCursor(10, 0);
 		lcdi2c.print("c");
-		lcdi2c.setCursor(x, 1);
+		lcdi2c.setCursor(8, 1);
 		lcdi2c.print("%");
 
 		lcdi2c.setCursor(15, 0);
 		lcdi2c.print("W");
-		lcdi2c.setCursor(15, 1);
-		lcdi2c.print("_");
+		//lcdi2c.setCursor(15, 1);
+		//lcdi2c.print(" ");
 	}
 
 	//
@@ -57,7 +56,7 @@ public:
 	//
 	void displayData(float temp, float hum)
 	{
-		int x = 6;
+		int x = 5;
 		lcdi2c.setCursor(x, 0);
 		lcdi2c.print(temp, 1);
 		lcdi2c.setCursor(x, 1);
