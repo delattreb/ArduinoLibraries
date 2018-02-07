@@ -45,10 +45,8 @@ public:
 		lcdi2c.setCursor(8, 1);
 		lcdi2c.print("%");
 
-		lcdi2c.setCursor(15, 0);
-		lcdi2c.print("W");
-		//lcdi2c.setCursor(15, 1);
-		//lcdi2c.print(" ");
+		lcdi2c.setCursor(14, 1);
+		lcdi2c.print("Db");
 	}
 
 	//
@@ -68,8 +66,17 @@ public:
 	//
 	void displayWiFiConnexion(String connexion)
 	{
-		lcdi2c.setCursor(15, 1);
+		lcdi2c.setCursor(15, 0);
 		lcdi2c.print(connexion);
+	}
+
+	//
+	// displayWiFiDbSignal
+	//
+	void displayWiFiDbSignal(String signal)
+	{
+		lcdi2c.setCursor(11, 1);
+		lcdi2c.print(signal);
 	}
 };
 

@@ -75,10 +75,11 @@ public:
 	//
 	String setDateTimeStr(String strtime)
 	{
-		char* time= (char *)malloc(strtime.length());
+		char *time = (char *)malloc(sizeof(char) * strtime.length());
 		strcpy(time, strtime.c_str());
-		RtcDateTime compiled = RtcDateTime(__DATE__, time);
-		Rtc.SetDateTime(compiled);
+		RtcDateTime newtime = RtcDateTime(__DATE__, time);
+		Rtc.SetDateTime(newtime);
+		free(time);
 	}
 
 	//
