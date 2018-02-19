@@ -41,10 +41,12 @@ public:
 		lcdi2c.print("Hum");
 
 		lcdi2c.setCursor(10, 0);
-		lcdi2c.print("c");
+		lcdi2c.print("C");
 		lcdi2c.setCursor(8, 1);
 		lcdi2c.print("%");
 
+		lcdi2c.setCursor(14, 0);
+		lcdi2c.print("W");
 		lcdi2c.setCursor(14, 1);
 		lcdi2c.print("Db");
 	}
