@@ -28,7 +28,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)libLCD.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libLED.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Adafruit_NeoPixel\Adafruit_NeoPixel.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\BlueDot_BME280_Library\BlueDot_BME280.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DallasTemperature\DallasTemperature.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcDateTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcDS3231.h" />
@@ -48,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Adafruit_NeoPixel\Adafruit_NeoPixel.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\BlueDot_BME280_Library\BlueDot_BME280.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DallasTemperature\DallasTemperature.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcDateTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DS3231\src\RtcUtility.cpp" />

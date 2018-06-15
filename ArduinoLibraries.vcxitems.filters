@@ -17,7 +17,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)libDS3231.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libDS1307.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libLogger.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\BlueDot_BME280_Library\BlueDot_BME280.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\DallasTemperature\DallasTemperature.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\I2Cdev\I2Cdev.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\MAX31850_OneWire\OneWire.h" />
@@ -39,7 +38,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\BlueDot_BME280_Library\BlueDot_BME280.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\DallasTemperature\DallasTemperature.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\I2Cdev\I2Cdev.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\MAX31850_OneWire\OneWire.cpp" />
