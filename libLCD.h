@@ -113,7 +113,7 @@ public:
 	void displayWiFiOk()
 	{
 		lcdi2c.setCursor(14, 0);
-		lcdi2c.print(lcdi2c.write(0));
+		lcdi2c.write(0);
 	}
 
 	//
@@ -131,7 +131,7 @@ public:
 	void displayMQTTOk()
 	{
 		lcdi2c.setCursor(15, 0);
-		lcdi2c.print(lcdi2c.write(1));
+		lcdi2c.write(1);
 	}
 	//
 	// displayWiFiDbSignal
