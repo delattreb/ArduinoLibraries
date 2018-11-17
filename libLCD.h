@@ -80,8 +80,6 @@ public:
 		lcdi2c.setCursor(8, 1);
 		lcdi2c.print("%");
 
-		//lcdi2c.setCursor(14, 0);
-		//lcdi2c.print("W");
 		lcdi2c.setCursor(14, 1);
 		lcdi2c.print("Db");
 	}
@@ -92,6 +90,11 @@ public:
 	void displayData(float temp, float hum)
 	{
 		int x = 5;
+		if (String(temp).length()-1 < 4) {
+			lcdi2c.setCursor(8, 0);
+			lcdi2c.print(" ");
+		}
+
 		lcdi2c.setCursor(x, 0);
 		lcdi2c.print(temp, 1);
 		lcdi2c.setCursor(x, 1);
@@ -138,7 +141,7 @@ public:
 	//
 	void displayWiFiDbSignal(String signal)
 	{
-		lcdi2c.setCursor(11, 1);
+		lcdi2c.setCursor(12, 1);
 		lcdi2c.print(signal);
 	}
 };
